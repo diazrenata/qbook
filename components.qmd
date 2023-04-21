@@ -1,0 +1,9 @@
+# Components of a RoLE model
+
+## Metacommunity
+
+### Species, traits, phylogeny, genetics
+
+## Local community
+
+### Species, traits, phylogeny, genetics

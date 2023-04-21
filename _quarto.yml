@@ -15,6 +15,7 @@ book:
         - role_mission.qmd
     - part: how_it_works.qmd
       chapters:
+        - components.qmd
         - inputs.qmd
         - timesteps.qmd
         - outputs.qmd
@@ -32,7 +33,7 @@ book:
         - exploration.qmd
         - empirical.qmd
         - classroom.qmd
-    - part: troubleshooting
+    - part: troubleshooting.qmd
       chapters:
         - contact.qmd
 

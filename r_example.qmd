@@ -1,9 +1,7 @@
-# Introduction
+# Your first RoLE model
 
-This is a book created from markdown and executable code.
+## Model specification
 
-See @knuth84 for additional discussion of literate programming.
+## Running
 
-```{r}
-1 + 1
-```
+## Results and interpretation

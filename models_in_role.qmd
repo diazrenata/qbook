@@ -1,9 +1,13 @@
-# Introduction
+# Models rolled into RoLE
 
-This is a book created from markdown and executable code.
+The RoLE model implements versions of a number of established models.
 
-See @knuth84 for additional discussion of literate programming.
+## Ecological neutral theory
 
-```{r}
-1 + 1
-```
+## Double-neutral ecological and population genetic drift
+
+## Competitive coexistence
+
+## Lotka-Volterra
+
+## Island biogeography

@@ -1,9 +1,6 @@
-# Introduction
+# Model inputs: Setting the stage
 
-This is a book created from markdown and executable code.
+## Parameter inputs
 
-See @knuth84 for additional discussion of literate programming.
+## Pre-set configurations
 
-```{r}
-1 + 1
-```

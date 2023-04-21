@@ -1,9 +1,5 @@
-# Introduction
+# Reproducibility
 
-This is a book created from markdown and executable code.
+## Stochasticity and non-repeatability
 
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+## Storing model results

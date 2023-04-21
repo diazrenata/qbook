@@ -1,9 +1,17 @@
-# Introduction
+# Timestep-to-timestep
 
-This is a book created from markdown and executable code.
+What happens when the model actually runs?
 
-See @knuth84 for additional discussion of literate programming.
+## Deaths
 
-```{r}
-1 + 1
-```
+## Birth and immigration
+
+## Speciation
+
+## Trait change
+
+## Phylogenetics
+
+## Population genetics
+
+

@@ -1,9 +1,7 @@
-# Introduction
+# RoLE Mission
 
-This is a book created from markdown and executable code.
+## Scientific vision
 
-See @knuth84 for additional discussion of literate programming.
+## Operating principles
 
-```{r}
-1 + 1
-```
+## Code of Conduct

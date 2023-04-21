@@ -2,155 +2,281 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "qbook",
+    "title": "RoLE Model User Guide",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a user guide for working with the RoLE model, which includes the roleR and roleShiny R packages."
   },
   {
     "objectID": "background.html",
     "href": "background.html",
-    "title": "Introduction",
+    "title": "Background",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "What is the RoLE Model? Who is involved? What are these packages?"
   },
   {
     "objectID": "process_modeling.html",
     "href": "process_modeling.html",
-    "title": "1  Introduction",
+    "title": "1  Process modeling in ecology and evolution",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "What is process modeling? Why do we use it for eco-evo"
   },
   {
     "objectID": "models_in_role.html",
     "href": "models_in_role.html",
-    "title": "2  Introduction",
+    "title": "2  Models rolled into RoLE",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "The RoLE model implements versions of a number of established models."
   },
   {
-    "objectID": "role_mission.html",
-    "href": "role_mission.html",
-    "title": "3  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "models_in_role.html#ecological-neutral-theory",
+    "href": "models_in_role.html#ecological-neutral-theory",
+    "title": "2  Models rolled into RoLE",
+    "section": "2.1 Ecological neutral theory",
+    "text": "2.1 Ecological neutral theory"
+  },
+  {
+    "objectID": "models_in_role.html#double-neutral-ecological-and-population-genetic-drift",
+    "href": "models_in_role.html#double-neutral-ecological-and-population-genetic-drift",
+    "title": "2  Models rolled into RoLE",
+    "section": "2.2 Double-neutral ecological and population genetic drift",
+    "text": "2.2 Double-neutral ecological and population genetic drift"
+  },
+  {
+    "objectID": "models_in_role.html#competitive-coexistence",
+    "href": "models_in_role.html#competitive-coexistence",
+    "title": "2  Models rolled into RoLE",
+    "section": "2.3 Competitive coexistence",
+    "text": "2.3 Competitive coexistence"
+  },
+  {
+    "objectID": "models_in_role.html#lotka-volterra",
+    "href": "models_in_role.html#lotka-volterra",
+    "title": "2  Models rolled into RoLE",
+    "section": "2.4 Lotka-Volterra",
+    "text": "2.4 Lotka-Volterra"
+  },
+  {
+    "objectID": "models_in_role.html#island-biogeography",
+    "href": "models_in_role.html#island-biogeography",
+    "title": "2  Models rolled into RoLE",
+    "section": "2.5 Island biogeography",
+    "text": "2.5 Island biogeography"
+  },
+  {
+    "objectID": "role_mission.html#operating-principles",
+    "href": "role_mission.html#operating-principles",
+    "title": "3  RoLE Mission",
+    "section": "3.2 Operating principles",
+    "text": "3.2 Operating principles"
+  },
+  {
+    "objectID": "role_mission.html#code-of-conduct",
+    "href": "role_mission.html#code-of-conduct",
+    "title": "3  RoLE Mission",
+    "section": "3.3 Code of Conduct",
+    "text": "3.3 Code of Conduct"
   },
   {
     "objectID": "how_it_works.html",
     "href": "how_it_works.html",
-    "title": "Introduction",
+    "title": "How a RoLE model works",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "No code, high level narrative (or visuals!) of what happens in a RoLE model."
   },
   {
-    "objectID": "inputs.html",
-    "href": "inputs.html",
-    "title": "4  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "components.html#local-community",
+    "href": "components.html#local-community",
+    "title": "4  Components of a RoLE model",
+    "section": "4.2 Local community",
+    "text": "4.2 Local community\n\n4.2.1 Species, traits, phylogeny, genetics"
+  },
+  {
+    "objectID": "inputs.html#pre-set-configurations",
+    "href": "inputs.html#pre-set-configurations",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.2 Pre-set configurations",
+    "text": "5.2 Pre-set configurations"
   },
   {
     "objectID": "timesteps.html",
     "href": "timesteps.html",
-    "title": "5  Introduction",
+    "title": "6  Timestep-to-timestep",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "What happens when the model actually runs?"
+  },
+  {
+    "objectID": "timesteps.html#deaths",
+    "href": "timesteps.html#deaths",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.1 Deaths",
+    "text": "6.1 Deaths"
+  },
+  {
+    "objectID": "timesteps.html#birth-and-immigration",
+    "href": "timesteps.html#birth-and-immigration",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.2 Birth and immigration",
+    "text": "6.2 Birth and immigration"
+  },
+  {
+    "objectID": "timesteps.html#speciation",
+    "href": "timesteps.html#speciation",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.3 Speciation",
+    "text": "6.3 Speciation"
+  },
+  {
+    "objectID": "timesteps.html#trait-change",
+    "href": "timesteps.html#trait-change",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.4 Trait change",
+    "text": "6.4 Trait change"
+  },
+  {
+    "objectID": "timesteps.html#phylogenetics",
+    "href": "timesteps.html#phylogenetics",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.5 Phylogenetics",
+    "text": "6.5 Phylogenetics"
+  },
+  {
+    "objectID": "timesteps.html#population-genetics",
+    "href": "timesteps.html#population-genetics",
+    "title": "6  Timestep-to-timestep",
+    "section": "6.6 Population genetics",
+    "text": "6.6 Population genetics"
   },
   {
     "objectID": "outputs.html",
     "href": "outputs.html",
-    "title": "6  Introduction",
+    "title": "7  Model results",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "What are the results of a role model?"
+  },
+  {
+    "objectID": "outputs.html#raw-community-state",
+    "href": "outputs.html#raw-community-state",
+    "title": "7  Model results",
+    "section": "7.1 Raw community state",
+    "text": "7.1 Raw community state"
+  },
+  {
+    "objectID": "outputs.html#summary-statistics",
+    "href": "outputs.html#summary-statistics",
+    "title": "7  Model results",
+    "section": "7.2 Summary statistics",
+    "text": "7.2 Summary statistics"
   },
   {
     "objectID": "experiments.html",
     "href": "experiments.html",
-    "title": "7  Introduction",
+    "title": "8  Introduction",
     "section": "",
     "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
     "objectID": "running.html",
     "href": "running.html",
-    "title": "Introduction",
+    "title": "Running RoLE models",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Ok, how do I actually play with RoLE?"
   },
   {
-    "objectID": "install.html",
-    "href": "install.html",
-    "title": "8  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "install.html#from-source",
+    "href": "install.html#from-source",
+    "title": "9  Installation",
+    "section": "9.2 From source",
+    "text": "9.2 From source"
   },
   {
-    "objectID": "shiny.html",
-    "href": "shiny.html",
-    "title": "9  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "shiny.html#access",
+    "href": "shiny.html#access",
+    "title": "10  RoLE Shiny",
+    "section": "10.2 Access",
+    "text": "10.2 Access"
   },
   {
-    "objectID": "r_example.html",
-    "href": "r_example.html",
-    "title": "10  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "shiny.html#using",
+    "href": "shiny.html#using",
+    "title": "10  RoLE Shiny",
+    "section": "10.3 Using",
+    "text": "10.3 Using"
   },
   {
-    "objectID": "r_at_scale.html",
-    "href": "r_at_scale.html",
-    "title": "11  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "shiny.html#saving-results",
+    "href": "shiny.html#saving-results",
+    "title": "10  RoLE Shiny",
+    "section": "10.4 Saving results",
+    "text": "10.4 Saving results"
   },
   {
-    "objectID": "reproducibility.html",
-    "href": "reproducibility.html",
-    "title": "12  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "r_example.html#running",
+    "href": "r_example.html#running",
+    "title": "11  Your first RoLE model",
+    "section": "11.2 Running",
+    "text": "11.2 Running"
   },
   {
-    "objectID": "batch.html",
-    "href": "batch.html",
-    "title": "13  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "r_example.html#results-and-interpretation",
+    "href": "r_example.html#results-and-interpretation",
+    "title": "11  Your first RoLE model",
+    "section": "11.3 Results and interpretation",
+    "text": "11.3 Results and interpretation"
+  },
+  {
+    "objectID": "reproducibility.html#storing-model-results",
+    "href": "reproducibility.html#storing-model-results",
+    "title": "13  Reproducibility",
+    "section": "13.2 Storing model results",
+    "text": "13.2 Storing model results"
   },
   {
     "objectID": "use_cases.html",
     "href": "use_cases.html",
-    "title": "Introduction",
+    "title": "Use cases",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Overview of main (forseen) use cases for RoLE."
   },
   {
     "objectID": "exploration.html",
     "href": "exploration.html",
-    "title": "14  Introduction",
+    "title": "15  RoLE Models for In-Silico Exploration",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Generate and test hypotheses for how different types of conditions/interventions affect model outcomes."
   },
   {
-    "objectID": "empirical.html",
-    "href": "empirical.html",
-    "title": "15  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "empirical.html#likelihood-free-inference",
+    "href": "empirical.html#likelihood-free-inference",
+    "title": "16  Linking pattern to process in empirical data",
+    "section": "16.2 Likelihood-free inference",
+    "text": "16.2 Likelihood-free inference"
+  },
+  {
+    "objectID": "empirical.html#worked-example",
+    "href": "empirical.html#worked-example",
+    "title": "16  Linking pattern to process in empirical data",
+    "section": "16.3 Worked example",
+    "text": "16.3 Worked example"
   },
   {
     "objectID": "classroom.html",
     "href": "classroom.html",
-    "title": "16  Introduction",
+    "title": "17  RoLE in the Classroom",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Tips, tricks, and sample curricula from using RoLE as a teaching tool."
+  },
+  {
+    "objectID": "troubleshooting.html",
+    "href": "troubleshooting.html",
+    "title": "Troubleshooting",
+    "section": "",
+    "text": "What to do when it doesn’t run."
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "17  Introduction",
+    "title": "18  Contact",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "We respond to GitHub issues!"
   }
 ]

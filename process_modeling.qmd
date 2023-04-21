@@ -1,9 +1,3 @@
-# Introduction
+# Process modeling in ecology and evolution
 
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+What is process modeling? Why do we use it for eco-evo

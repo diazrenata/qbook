@@ -1,9 +1,7 @@
-# Introduction
+# Model results
 
-This is a book created from markdown and executable code.
+What are the results of a role model?
 
-See @knuth84 for additional discussion of literate programming.
+## Raw community state
 
-```{r}
-1 + 1
-```
+## Summary statistics

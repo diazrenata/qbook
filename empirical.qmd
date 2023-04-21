@@ -1,9 +1,7 @@
-# Introduction
+# Linking pattern to process in empirical data
 
-This is a book created from markdown and executable code.
+## Many-to-one mapping
 
-See @knuth84 for additional discussion of literate programming.
+## Likelihood-free inference
 
-```{r}
-1 + 1
-```
+## Worked example
