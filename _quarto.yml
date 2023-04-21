@@ -8,9 +8,33 @@ book:
   date: "4/21/2023"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - part: background.qmd
+      chapters: 
+        - process_modeling.qmd
+        - models_in_role.qmd
+        - role_mission.qmd
+    - part: how_it_works.qmd
+      chapters:
+        - inputs.qmd
+        - timesteps.qmd
+        - outputs.qmd
+        - experiments.qmd
+    - part: running.qmd
+      chapters:
+        - install.qmd
+        - shiny.qmd
+        - r_example.qmd
+        - r_at_scale.qmd
+        - reproducibility.qmd
+        - batch.qmd
+    - part: use_cases.qmd
+      chapters:
+        - exploration.qmd
+        - empirical.qmd
+        - classroom.qmd
+    - part: troubleshooting
+      chapters:
+        - contact.qmd
 
 bibliography: references.bib
 
