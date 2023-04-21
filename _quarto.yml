@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 book:
-  title: "qbook"
-  author: "Jane Doe"
+  title: "RoLE Model User Guide"
+  author: "Renata Diaz, for now"
   date: "4/21/2023"
   chapters:
     - index.qmd
