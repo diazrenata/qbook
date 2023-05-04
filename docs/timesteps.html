@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RoLE Model User Guide - 6&nbsp; Timestep-to-timestep</title>
+<title>RoLE Model User Guide - 7&nbsp; Timestep-to-timestep</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./outputs.html" rel="next">
-<link href="./inputs.html" rel="prev">
+<link href="./backwards.html" rel="next">
+<link href="./initialization.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -138,17 +138,27 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./timesteps.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></a>
+  <a href="./initialization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Initialization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./outputs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Model results</span></a>
+  <a href="./timesteps.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./experiments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./backwards.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">On model completion: backwards-time population genetics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./outputs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./experiments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -163,32 +173,32 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation</span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Installation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./shiny.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">RoLE Shiny</span></a>
+  <a href="./shiny.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Shiny</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
+  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
+  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reproducibility</span></a>
+  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Reproducibility</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">(Not implemented) RoLE models at scale</span></a>
+  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">(Not implemented) RoLE models at scale</span></a>
   </div>
 </li>
       </ul>
@@ -203,17 +213,17 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
+  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
+  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
+  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
   </div>
 </li>
       </ul>
@@ -228,7 +238,7 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Contact</span></a>
+  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Contact</span></a>
   </div>
 </li>
       </ul>
@@ -242,10 +252,10 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#deaths" id="toc-deaths" class="nav-link active" data-scroll-target="#deaths"> <span class="header-section-number">6.1</span> Deaths</a></li>
-  <li><a href="#birth-and-dispersal" id="toc-birth-and-dispersal" class="nav-link" data-scroll-target="#birth-and-dispersal"> <span class="header-section-number">6.2</span> Birth and dispersal</a></li>
-  <li><a href="#speciation" id="toc-speciation" class="nav-link" data-scroll-target="#speciation"> <span class="header-section-number">6.3</span> Speciation</a></li>
-  <li><a href="#trait-change" id="toc-trait-change" class="nav-link" data-scroll-target="#trait-change"> <span class="header-section-number">6.4</span> Trait change</a></li>
+  <li><a href="#deaths" id="toc-deaths" class="nav-link active" data-scroll-target="#deaths"> <span class="header-section-number">7.1</span> Deaths</a></li>
+  <li><a href="#birth-and-dispersal" id="toc-birth-and-dispersal" class="nav-link" data-scroll-target="#birth-and-dispersal"> <span class="header-section-number">7.2</span> Birth and dispersal</a></li>
+  <li><a href="#speciation" id="toc-speciation" class="nav-link" data-scroll-target="#speciation"> <span class="header-section-number">7.3</span> Speciation</a></li>
+  <li><a href="#trait-change" id="toc-trait-change" class="nav-link" data-scroll-target="#trait-change"> <span class="header-section-number">7.4</span> Trait change</a></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +264,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Timestep-to-timestep</span></h1>
 </div>
 
 
@@ -271,8 +281,8 @@ ul.task-list{list-style: none;}
 <p>What happens when the model actually runs? To really understand the model, we have to understand its steps and the logic and implications of each one.</p>
 <p>Each model run is composed of several timesteps, and during each step events like death, birth, immigration, and speciation happen to individuals or species in the model.</p>
 <p>These events happen randomly based on the model parameters, causing the state of the local and meta communities to change as the model is run.</p>
-<section id="deaths" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="deaths"><span class="header-section-number">6.1</span> Deaths</h2>
+<section id="deaths" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="deaths"><span class="header-section-number">7.1</span> Deaths</h2>
 <p>Every timestep, no matter what, an individual in the local community dies.</p>
 <p>If we are using a neutral model (parameter neut_delta = 1), a completely random individual is always chosen for death. This is the definition of neutral evolution!</p>
 <p>But if the model is not neutral, an individual’s chance of death (or ability to survive in its environment) is based on its ability to compete with other individuals and survive in its environment.</p>
@@ -280,22 +290,22 @@ ul.task-list{list-style: none;}
 <p>But at the same time, the more individuals that have similar traits to it, the more the resources each needs will overlap, and this competition will make it harder to survive. (Add more on theory here).</p>
 <p>An outcome of RoLE’s individual-based model framework is that intraspecific competition is modeled, and even emphasized. Since individuals of the same species typically have similar traits, they will compete more. (could add info on what comp and env sigma do, but this info might belong in parameters section).</p>
 </section>
-<section id="birth-and-dispersal" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="birth-and-dispersal"><span class="header-section-number">6.2</span> Birth and dispersal</h2>
+<section id="birth-and-dispersal" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="birth-and-dispersal"><span class="header-section-number">7.2</span> Birth and dispersal</h2>
 <p>Every timestep, no matter what, EITHER birth or dispersal causes a new individual to appear in the local community.</p>
 <p>Birth is when an individual in the local community reproduces to make a single offspring.</p>
 <p>Dispersal is when an individual is born in the metacommunity and immigrates from the metacommunity to the local community.</p>
 <p>The chance of each is based on the dispersal_prob param, which is simply the chance of dispersal (making 1-dispersal_prob the chance of birth).</p>
 </section>
-<section id="speciation" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="speciation"><span class="header-section-number">6.3</span> Speciation</h2>
+<section id="speciation" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="speciation"><span class="header-section-number">7.3</span> Speciation</h2>
 <p>Speciation in RoLE works by making the individual that was just birthed or immigrated a new species.</p>
 <p>Speciation may or may not happen each timestep, with a chance equal to speciation_local.</p>
 <p>Realistically speciation_local is an extremely small value like 0.001 to capture the rarity of speciation events over time.</p>
 <p>When speciation happens, a new tip is added to the phylogeny for the new species.</p>
 </section>
-<section id="trait-change" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="trait-change"><span class="header-section-number">6.4</span> Trait change</h2>
+<section id="trait-change" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="trait-change"><span class="header-section-number">7.4</span> Trait change</h2>
 <p>When birth, dispersal, or speciation happens, the new individual gets a new trait deviating from the traits of its parent.</p>
 <p>This deviation depends on the trait_sigma parameter - the larger the trait_sigma the more child traits will deviate from parent traits. (this is also based on speciation meta and extinction meta, which could be worth explaining)</p>
 
@@ -402,13 +412,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./inputs.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Model inputs: Setting the stage</span></span>
+      <a href="./initialization.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Initialization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./outputs.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Model results</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./backwards.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">On model completion: backwards-time population genetics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

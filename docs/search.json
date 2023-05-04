@@ -100,63 +100,63 @@
   {
     "objectID": "timesteps.html",
     "href": "timesteps.html",
-    "title": "6  Timestep-to-timestep",
+    "title": "7  Timestep-to-timestep",
     "section": "",
     "text": "What happens when the model actually runs? To really understand the model, we have to understand its steps and the logic and implications of each one.\nEach model run is composed of several timesteps, and during each step events like death, birth, immigration, and speciation happen to individuals or species in the model.\nThese events happen randomly based on the model parameters, causing the state of the local and meta communities to change as the model is run."
   },
   {
     "objectID": "timesteps.html#deaths",
     "href": "timesteps.html#deaths",
-    "title": "6  Timestep-to-timestep",
-    "section": "6.1 Deaths",
-    "text": "6.1 Deaths\nEvery timestep, no matter what, an individual in the local community dies.\nIf we are using a neutral model (parameter neut_delta = 1), a completely random individual is always chosen for death. This is the definition of neutral evolution!\nBut if the model is not neutral, an individual’s chance of death (or ability to survive in its environment) is based on its ability to compete with other individuals and survive in its environment.\nThe closer the trait of the individual is to the environmental optimum of 1, a perfect match to its environment, the more likely it is to survive.\nBut at the same time, the more individuals that have similar traits to it, the more the resources each needs will overlap, and this competition will make it harder to survive. (Add more on theory here).\nAn outcome of RoLE’s individual-based model framework is that intraspecific competition is modeled, and even emphasized. Since individuals of the same species typically have similar traits, they will compete more. (could add info on what comp and env sigma do, but this info might belong in parameters section)."
+    "title": "7  Timestep-to-timestep",
+    "section": "7.1 Deaths",
+    "text": "7.1 Deaths\nEvery timestep, no matter what, an individual in the local community dies.\nIf we are using a neutral model (parameter neut_delta = 1), a completely random individual is always chosen for death. This is the definition of neutral evolution!\nBut if the model is not neutral, an individual’s chance of death (or ability to survive in its environment) is based on its ability to compete with other individuals and survive in its environment.\nThe closer the trait of the individual is to the environmental optimum of 1, a perfect match to its environment, the more likely it is to survive.\nBut at the same time, the more individuals that have similar traits to it, the more the resources each needs will overlap, and this competition will make it harder to survive. (Add more on theory here).\nAn outcome of RoLE’s individual-based model framework is that intraspecific competition is modeled, and even emphasized. Since individuals of the same species typically have similar traits, they will compete more. (could add info on what comp and env sigma do, but this info might belong in parameters section)."
   },
   {
     "objectID": "timesteps.html#birth-and-dispersal",
     "href": "timesteps.html#birth-and-dispersal",
-    "title": "6  Timestep-to-timestep",
-    "section": "6.2 Birth and dispersal",
-    "text": "6.2 Birth and dispersal\nEvery timestep, no matter what, EITHER birth or dispersal causes a new individual to appear in the local community.\nBirth is when an individual in the local community reproduces to make a single offspring.\nDispersal is when an individual is born in the metacommunity and immigrates from the metacommunity to the local community.\nThe chance of each is based on the dispersal_prob param, which is simply the chance of dispersal (making 1-dispersal_prob the chance of birth)."
+    "title": "7  Timestep-to-timestep",
+    "section": "7.2 Birth and dispersal",
+    "text": "7.2 Birth and dispersal\nEvery timestep, no matter what, EITHER birth or dispersal causes a new individual to appear in the local community.\nBirth is when an individual in the local community reproduces to make a single offspring.\nDispersal is when an individual is born in the metacommunity and immigrates from the metacommunity to the local community.\nThe chance of each is based on the dispersal_prob param, which is simply the chance of dispersal (making 1-dispersal_prob the chance of birth)."
   },
   {
     "objectID": "timesteps.html#speciation",
     "href": "timesteps.html#speciation",
-    "title": "6  Timestep-to-timestep",
-    "section": "6.3 Speciation",
-    "text": "6.3 Speciation\nSpeciation in RoLE works by making the individual that was just birthed or immigrated a new species.\nSpeciation may or may not happen each timestep, with a chance equal to speciation_local.\nRealistically speciation_local is an extremely small value like 0.001 to capture the rarity of speciation events over time.\nWhen speciation happens, a new tip is added to the phylogeny for the new species."
+    "title": "7  Timestep-to-timestep",
+    "section": "7.3 Speciation",
+    "text": "7.3 Speciation\nSpeciation in RoLE works by making the individual that was just birthed or immigrated a new species.\nSpeciation may or may not happen each timestep, with a chance equal to speciation_local.\nRealistically speciation_local is an extremely small value like 0.001 to capture the rarity of speciation events over time.\nWhen speciation happens, a new tip is added to the phylogeny for the new species."
   },
   {
     "objectID": "timesteps.html#trait-change",
     "href": "timesteps.html#trait-change",
-    "title": "6  Timestep-to-timestep",
-    "section": "6.4 Trait change",
-    "text": "6.4 Trait change\nWhen birth, dispersal, or speciation happens, the new individual gets a new trait deviating from the traits of its parent.\nThis deviation depends on the trait_sigma parameter - the larger the trait_sigma the more child traits will deviate from parent traits. (this is also based on speciation meta and extinction meta, which could be worth explaining)"
+    "title": "7  Timestep-to-timestep",
+    "section": "7.4 Trait change",
+    "text": "7.4 Trait change\nWhen birth, dispersal, or speciation happens, the new individual gets a new trait deviating from the traits of its parent.\nThis deviation depends on the trait_sigma parameter - the larger the trait_sigma the more child traits will deviate from parent traits. (this is also based on speciation meta and extinction meta, which could be worth explaining)"
   },
   {
     "objectID": "outputs.html",
     "href": "outputs.html",
-    "title": "7  Model results",
+    "title": "9  Model results",
     "section": "",
     "text": "What are the results of a role model?"
   },
   {
     "objectID": "outputs.html#raw-community-state",
     "href": "outputs.html#raw-community-state",
-    "title": "7  Model results",
-    "section": "7.1 Raw community state",
-    "text": "7.1 Raw community state"
+    "title": "9  Model results",
+    "section": "9.1 Raw community state",
+    "text": "9.1 Raw community state"
   },
   {
     "objectID": "outputs.html#summary-statistics",
     "href": "outputs.html#summary-statistics",
-    "title": "7  Model results",
-    "section": "7.2 Summary statistics",
-    "text": "7.2 Summary statistics"
+    "title": "9  Model results",
+    "section": "9.2 Summary statistics",
+    "text": "9.2 Summary statistics"
   },
   {
     "objectID": "experiments.html",
     "href": "experiments.html",
-    "title": "8  Introduction",
+    "title": "10  Introduction",
     "section": "",
     "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
@@ -170,51 +170,51 @@
   {
     "objectID": "install.html#from-source",
     "href": "install.html#from-source",
-    "title": "9  Installation",
-    "section": "9.2 From source",
-    "text": "9.2 From source"
+    "title": "11  Installation",
+    "section": "11.2 From source",
+    "text": "11.2 From source"
   },
   {
     "objectID": "shiny.html#access",
     "href": "shiny.html#access",
-    "title": "10  RoLE Shiny",
-    "section": "10.2 Access",
-    "text": "10.2 Access"
+    "title": "12  RoLE Shiny",
+    "section": "12.2 Access",
+    "text": "12.2 Access"
   },
   {
     "objectID": "shiny.html#using",
     "href": "shiny.html#using",
-    "title": "10  RoLE Shiny",
-    "section": "10.3 Using",
-    "text": "10.3 Using"
+    "title": "12  RoLE Shiny",
+    "section": "12.3 Using",
+    "text": "12.3 Using"
   },
   {
     "objectID": "shiny.html#saving-results",
     "href": "shiny.html#saving-results",
-    "title": "10  RoLE Shiny",
-    "section": "10.4 Saving results",
-    "text": "10.4 Saving results"
+    "title": "12  RoLE Shiny",
+    "section": "12.4 Saving results",
+    "text": "12.4 Saving results"
   },
   {
     "objectID": "r_example.html#running",
     "href": "r_example.html#running",
-    "title": "11  Your first RoLE model",
-    "section": "11.2 Running",
-    "text": "11.2 Running"
+    "title": "13  Your first RoLE model",
+    "section": "13.2 Running",
+    "text": "13.2 Running"
   },
   {
     "objectID": "r_example.html#results-and-interpretation",
     "href": "r_example.html#results-and-interpretation",
-    "title": "11  Your first RoLE model",
-    "section": "11.3 Results and interpretation",
-    "text": "11.3 Results and interpretation"
+    "title": "13  Your first RoLE model",
+    "section": "13.3 Results and interpretation",
+    "text": "13.3 Results and interpretation"
   },
   {
     "objectID": "reproducibility.html#storing-model-results",
     "href": "reproducibility.html#storing-model-results",
-    "title": "13  Reproducibility",
-    "section": "13.2 Storing model results",
-    "text": "13.2 Storing model results"
+    "title": "15  Reproducibility",
+    "section": "15.2 Storing model results",
+    "text": "15.2 Storing model results"
   },
   {
     "objectID": "use_cases.html",
@@ -226,28 +226,28 @@
   {
     "objectID": "exploration.html",
     "href": "exploration.html",
-    "title": "15  RoLE Models for In-Silico Exploration",
+    "title": "17  RoLE Models for In-Silico Exploration",
     "section": "",
     "text": "Generate and test hypotheses for how different types of conditions/interventions affect model outcomes."
   },
   {
     "objectID": "empirical.html#likelihood-free-inference",
     "href": "empirical.html#likelihood-free-inference",
-    "title": "16  Linking pattern to process in empirical data",
-    "section": "16.2 Likelihood-free inference",
-    "text": "16.2 Likelihood-free inference"
+    "title": "18  Linking pattern to process in empirical data",
+    "section": "18.2 Likelihood-free inference",
+    "text": "18.2 Likelihood-free inference"
   },
   {
     "objectID": "empirical.html#worked-example",
     "href": "empirical.html#worked-example",
-    "title": "16  Linking pattern to process in empirical data",
-    "section": "16.3 Worked example",
-    "text": "16.3 Worked example"
+    "title": "18  Linking pattern to process in empirical data",
+    "section": "18.3 Worked example",
+    "text": "18.3 Worked example"
   },
   {
     "objectID": "classroom.html",
     "href": "classroom.html",
-    "title": "17  RoLE in the Classroom",
+    "title": "19  RoLE in the Classroom",
     "section": "",
     "text": "Tips, tricks, and sample curricula from using RoLE as a teaching tool."
   },
@@ -261,7 +261,7 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "18  Contact",
+    "title": "20  Contact",
     "section": "",
     "text": "We respond to GitHub issues!"
   }
