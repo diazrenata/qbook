@@ -2,13 +2,13 @@
 
 Next we will examine what the components of the RoLE model are, what each means biologically, and how to access them within roleR's classes and structure.
 
-## Local community 
+## Local community
 
 A local community is an assemblage of interacting species that occur in the same location and ecosystem. For example given a series of islands where each has just one type of habitat and no barriers, each could be considered a different local community.
 
 The 'localComm' class in roleR stores the state of what species are present in local community, their abundances and genetic sequences, and what traits individuals have. Then we can simulate how this community changes over time.
 
-### Individual-indexed vectors 
+### Individual-indexed vectors
 
 The 'localComm' slots 'indSpecies', 'indTrait', and 'indSeqs' are vectors containing species IDs, traits, and sequences for each individual.
 

@@ -4,35 +4,45 @@ Having just explored the components of the model, we will now review the input p
 
 We will also review the default configurations of parameters available in roleR and their meanings and assumptions.
 
-## Community shape & initialization params
+## Initialization param
 
-individuals_local
+init_type is the model of colonization used to initialize the simulation, either "oceanic_island" or "bridge_island"
 
-individuals_meta
+The bridge island model has the initial individuals in the local community arriving through a land bridge, while the oceanic has no bridge and is populated by a single dispersal event. Thus, for oceanic island models, all individuals are of a SINGLE species sampled proportional to meta community species abundances, while in bridge island models, individuals are sampled of MANY species proportional to their abundances.
 
-species_meta
+## Community shape params
 
-init_type
+individuals_local is the number of individuals in the local community
+
+individuals_meta is the number of individuals in the metacommunity
+
+species_meta is the number of species in the metacommunity
 
 ## Birth vs. dispersal param
 
-dispersal_prob
+dispersal_prob is probability of dispersal (immigration) occurring from the metacommunity to the local community at each time step
+
+Every time step, either birth or immigration ALWAYS happens, so the probability of birth is just 1 minus the dispersal_prob.
 
 ## Speciation and extinction params
 
-speciation_local
+speciation_local is the probability of speciation occurring in the local community at each time step.
 
-speciation_meta
+The new local species can be either from a birth in the local community or an immigration from the metacommunity - the aforementioned dispersal_prob param determines the chance of each of these scenarios.
 
-extinction_meta
+speciation_meta is the rate of speciation in the metacommunity.
+
+This is used during the simulation of the start phylogeny for metacommunity species. In addition, the sum of speciation_meta and extinction_meta is equal to the average lifetime of phylo branches, and the larger this value the less new individual traits will deviate from the parent's individual trait (if parent is in the local comm) or the metacommunity mean (if parent in the metacommunity).
+
+extinction_meta is the rate of extinction in the metacommunity. Like speciation_meta, it is used in the initial phylogeny simulation and in relation to trait deviation.
 
 ## Traits, filtering, and competition params
 
-trait_sigma
+trait_sigma is the rate of Brownian trait evolution in the metacommunity. It determines how much the trait of a new individual deviates from its parent, i.e. how fast traits change.
 
-env_sigma
+env_sigma is the selectivity of the environmental filter, i.e. how strongly the environment selects which trait values are a good match for it. The larger the value, the less chance an individual will survive if it's far from the trait optimum (which is 0).
 
-comp_sigma
+comp_sigma is the size of the competition kernel: how strongly distance from the traits of other species selects which trait values are likely to survive. The larger the value, the greater the chance an individual will survive if it is close in trait space to others
 
 ## Genetics params
 
@@ -42,8 +52,10 @@ num_basepairs
 
 ## Meta params
 
-niter
+niter is the number of iteration time steps to run the simulation for.
 
-niterTimestep
+niterTimestep is the frequency (in numbers of iterations) at which the model state is snapshot and saved in a model's model steps object.
 
 ## Pre-set configurations
+
+untbParams

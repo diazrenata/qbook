@@ -2,4 +2,19 @@
 
 ## Compiled binaries
 
+We recommend installing our pre-compiled binaries from r-universe.
+
+```{r eval=FALSE}
+
+install.packages('roleR', repos = c('https://role-model.r-universe.dev', 'https://cloud.r-project.org'))
+```
+
 ## From source
+
+You can also install from source from our GitHub repository, but it is not recommended.
+
+```{r eval=FALSE}
+
+library(remotes)
+remotes::install_github("role-model/roleR",dependencies=TRUE)
+```

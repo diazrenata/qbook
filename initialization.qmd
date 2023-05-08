@@ -1,4 +1,17 @@
-# Initialization 
+# Initialization
 
 ## The initial state of the model
 
+Let's review how the model is initialized under the hood.
+
+First, a phylogeny for the species in the metacommunity is simulated based on the rates of speciation and extinction in the metacommunity (speciation_meta and extinction_meta parameters).
+
+Second, abundances for the species in the metacommunity are simulated using a log series model.
+
+Third, traits for the species in the metacommunity are simulated across the phylogeny using a Brownian motion model.
+
+Finally, the colonization from our metacommunity to the new local community is simulated (depending on the init_type parameter, which chooses the model).
+
+In the oceanic island case, a single dispersal event of just one species occurs, for example through a vegetation raft. This means that all individuals in the local will start as that one species.
+
+In the bridge island case, many species arrive at once through a land bridge, making the initial individuals a variety of different species.

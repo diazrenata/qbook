@@ -1,3 +1,11 @@
-# (Not implemented) RoLE models at scale
+# RoLE models at scale
 
-## Paralell and cluster computing
+## Parallel and cluster computing
+
+When running a roleExperiment, you can run each model on a different processor core in Windows, Mac, and Linux by using the 'cores' argument of runRole.
+
+```{r eval=FALSE}
+
+my_expr <- runRole(my_expr, cores=5)
+
+```

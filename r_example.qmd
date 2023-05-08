@@ -1,7 +1,43 @@
 # Your first RoLE model
 
+Let's go through the steps of running simple neutral model.
+
 ## Model specification
+
+First we make a roleParams object to contain the parameters for our model. The roleParams constructor has defaults for all 19 params, here we just change the number of iterations and how often to save the model state.
+
+```{r eval=FALSE}
+
+my_params <- roleParams(niter=10000,niterTimestep = 100)
+
+```
+
+Then we make a roleModel object using these params.
+
+```{r eval=FALSE}
+
+my_model <- roleModel(my_params)
+```
 
 ## Running
 
+To run, we call runRole on the model.
+
+```{r eval=FALSE}
+
+my_model <- runRole(my_model)
+```
+
 ## Results and interpretation
+
+Finally let's visualize a simple result - the species richness of the local community over time.
+
+```{r eval=FALSE}
+
+my_model_stats <- getSumStats(my_model)
+
+library(ggplot2)
+ggplot(my_model_stats, aes(iteration, richness)) +
+    geom_line()
+
+```

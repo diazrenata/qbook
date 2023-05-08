@@ -16,4 +16,4 @@ writeRole(my_model,filename="my_model")
 
 ## Stochasticity and non-repeatability
 
-May want to allow setting a seed in roleModels and experiments
+May want to allow setting a seed in roleModels and experiments - note that this doesn't work currently because the random number generator is on the Cpp side
