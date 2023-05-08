@@ -1,5 +1,19 @@
-# Reproducibility
+# Data sharing and reproducibility
+
+## Saving model results
+
+It is good practice to save your models and experiments so that other researchers can understand and repeat your results. Before saving you will want to attach context metadata to your object using the 'setContext' function.
+
+```{r eval=FALSE}
+my_model <- setContext(my_model,author="Jacob Idec",datestring="5/4/2023",description="A model saved for the purpose of demonstrating setContext and writeRole within the roleR user guide")
+```
+
+Then you can save using the 'writeRole' function
+
+```{r eval=FALSE}
+writeRole(my_model,filename="my_model")
+```
 
 ## Stochasticity and non-repeatability
 
-## Storing model results
+May want to allow setting a seed in roleModels and experiments

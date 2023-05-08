@@ -1,7 +1,51 @@
-# Model results
+# Extracting model results
 
-What are the results of a role model?
+We have seen that the 'runRole()' function runs an initialized model to completion. What kinds of results can we get from a run model?
+
+A useful way to store model results is in a dataframe where each row is a saved model state and each column contains different info about that state.
+
+We use the 'getSumStats()' function to do this for a model. The first argument is the model itself, while the second argument is a named list of functions. Each function expresses one way that you want to summarize the model state, and the name of that function in the list expressed the name to give to the column in your new dataframe.
+
+```{r eval=FALSE}
+my_stats <- getSumStats(my_model,list(rich = richness, hill_abund=hillAbund))
+```
+
+The above code supplies the roleR built-in functions 'richness' and 'hillAbund', with data extracted using these functions to be placed in columns called 'rich' and 'hill_abund' respectively.
+
+But what are these functions, and how can you write your own specialized ones?
 
 ## Raw community state
 
+Several functions simply get raw information about the community state.
+
+'rawAbundance'
+
+'rawSpAbundance'
+
+'rawSppID'
+
+'rawTraits'
+
+'rawGenDiv'
+
+'rawSeqs'
+
+'rawBranchLengths'
+
+'rawApePhylo'
+
 ## Summary statistics
+
+The remaining built-in functions are more complex, summarizing information from model components rather than just returning the raw components.
+
+'richness'
+
+'hillAbund'
+
+'hillGenetic'
+
+'hillTrait'
+
+'hillPhylo'
+
+## Writing custom getSumStats functions

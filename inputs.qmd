@@ -1,6 +1,49 @@
 # Model inputs: Setting the stage
 
-## Parameter inputs
+Having just explored the components of the model, we will now review the input parameters that "set the stage" by defining both how these components are initialized and how they change over the course of the simulation.
+
+We will also review the default configurations of parameters available in roleR and their meanings and assumptions.
+
+## Community shape & initialization params
+
+individuals_local
+
+individuals_meta
+
+species_meta
+
+init_type
+
+## Birth vs. dispersal param
+
+dispersal_prob
+
+## Speciation and extinction params
+
+speciation_local
+
+speciation_meta
+
+extinction_meta
+
+## Traits, filtering, and competition params
+
+trait_sigma
+
+env_sigma
+
+comp_sigma
+
+## Genetics params
+
+mutation_rate
+
+num_basepairs
+
+## Meta params
+
+niter
+
+niterTimestep
 
 ## Pre-set configurations
-
