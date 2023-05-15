@@ -4,8 +4,8 @@ project:
 
 book:
   title: "RoLE Model User Guide"
-  author: "Renata Diaz, for now"
-  date: "4/21/2023"
+  author: "Jacob Idec, Renata Diaz, and the RoLE Team"
+  date: "5/15/2023"
   chapters:
     - index.qmd
     - part: background.qmd
