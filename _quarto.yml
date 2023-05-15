@@ -21,11 +21,10 @@ book:
         - timesteps.qmd
         - backwards.qmd
         - outputs.qmd
-        - experiments.qmd
     - part: running.qmd
       chapters:
         - install.qmd
-        - shiny.qmd
+   #     - shiny.qmd
         - r_example.qmd
         - r_at_scale.qmd
         - reproducibility.qmd
@@ -38,6 +37,7 @@ book:
     - part: troubleshooting.qmd
       chapters:
         - contact.qmd
+    - part: acknowledgements.qmd
 
 bibliography: references.bib
 

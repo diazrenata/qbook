@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RoLE Model User Guide - 9&nbsp; Model results</title>
+<title>RoLE Model User Guide - 9&nbsp; Extracting model results</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -25,7 +88,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./experiments.html" rel="next">
+<link href="./running.html" rel="next">
 <link href="./backwards.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -65,7 +128,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model results</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracting model results</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -153,12 +216,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./outputs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./experiments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./outputs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracting model results</span></a>
   </div>
 </li>
       </ul>
@@ -173,32 +231,27 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Installation</span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Installation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./shiny.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Shiny</span></a>
+  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
+  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
+  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data sharing and reproducibility</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Reproducibility</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">(Not implemented) RoLE models at scale</span></a>
+  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">RoLE models at scale</span></a>
   </div>
 </li>
       </ul>
@@ -213,17 +266,17 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
+  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
+  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
+  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
   </div>
 </li>
       </ul>
@@ -238,10 +291,13 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Contact</span></a>
+  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Contact</span></a>
   </div>
 </li>
       </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Acknowledgements</span>
   </li>
     </ul>
     </div>
@@ -254,6 +310,7 @@ ul.task-list{list-style: none;}
   <ul>
   <li><a href="#raw-community-state" id="toc-raw-community-state" class="nav-link active" data-scroll-target="#raw-community-state"> <span class="header-section-number">9.1</span> Raw community state</a></li>
   <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics"> <span class="header-section-number">9.2</span> Summary statistics</a></li>
+  <li><a href="#writing-custom-getsumstats-functions" id="toc-writing-custom-getsumstats-functions" class="nav-link" data-scroll-target="#writing-custom-getsumstats-functions"> <span class="header-section-number">9.3</span> Writing custom getSumStats functions</a></li>
   </ul>
 </nav>
     </div>
@@ -262,7 +319,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model results</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracting model results</span></h1>
 </div>
 
 
@@ -276,12 +333,37 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>What are the results of a role model?</p>
+<p>We have seen that the ‘runRole()’ function runs an initialized model to completion. What kinds of results can we get from a run model?</p>
+<p>A useful way to store model results is in a dataframe where each row is a saved model state and each column contains different info about that state.</p>
+<p>We use the ‘getSumStats()’ function to do this for a model. The first argument is the model itself, while the second argument is a named list of functions. Each function expresses one way that you want to summarize the model state, and the name of that function in the list expressed the name to give to the column in your new dataframe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_stats <span class="ot">&lt;-</span> <span class="fu">getSumStats</span>(my_model,<span class="fu">list</span>(<span class="at">rich =</span> richness, <span class="at">hill_abund=</span>hillAbund))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The above code supplies the roleR built-in functions ‘richness’ and ‘hillAbund’, with data extracted using these functions to be placed in columns called ‘rich’ and ‘hill_abund’ respectively.</p>
+<p>But what are these functions, and how can you write your own specialized ones?</p>
 <section id="raw-community-state" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="raw-community-state"><span class="header-section-number">9.1</span> Raw community state</h2>
+<p>Several functions simply get raw information about the community state.</p>
+<p>‘rawAbundance’</p>
+<p>‘rawSpAbundance’</p>
+<p>‘rawSppID’</p>
+<p>‘rawTraits’</p>
+<p>‘rawGenDiv’</p>
+<p>‘rawSeqs’</p>
+<p>‘rawBranchLengths’</p>
+<p>‘rawApePhylo’</p>
 </section>
 <section id="summary-statistics" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="summary-statistics"><span class="header-section-number">9.2</span> Summary statistics</h2>
+<p>The remaining built-in functions are more complex, summarizing information from model components rather than just returning the raw components.</p>
+<p>‘richness’</p>
+<p>‘hillAbund’</p>
+<p>‘hillGenetic’</p>
+<p>‘hillTrait’</p>
+<p>‘hillPhylo’</p>
+</section>
+<section id="writing-custom-getsumstats-functions" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="writing-custom-getsumstats-functions"><span class="header-section-number">9.3</span> Writing custom getSumStats functions</h2>
 
 
 </section>
@@ -391,8 +473,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./experiments.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./running.html" class="pagination-link">
+        <span class="nav-page-text">Running RoLE models</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

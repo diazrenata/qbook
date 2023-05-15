@@ -153,12 +153,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./outputs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./experiments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./outputs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Extracting model results</span></a>
   </div>
 </li>
       </ul>
@@ -173,32 +168,27 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Installation</span></a>
+  <a href="./install.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Installation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./shiny.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Shiny</span></a>
+  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Your first RoLE model</span></a>
+  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./r_at_scale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">RoLE Experiments</span></a>
+  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data sharing and reproducibility</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Reproducibility</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">(Not implemented) RoLE models at scale</span></a>
+  <a href="./batch.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">RoLE models at scale</span></a>
   </div>
 </li>
       </ul>
@@ -213,17 +203,17 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
+  <a href="./exploration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">RoLE Models for In-Silico Exploration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
+  <a href="./empirical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linking pattern to process in empirical data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
+  <a href="./classroom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">RoLE in the Classroom</span></a>
   </div>
 </li>
       </ul>
@@ -238,10 +228,13 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Contact</span></a>
+  <a href="./contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Contact</span></a>
   </div>
 </li>
       </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Acknowledgements</span>
   </li>
     </ul>
     </div>
@@ -277,6 +270,13 @@ ul.task-list{list-style: none;}
 
 <section id="the-initial-state-of-the-model" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="the-initial-state-of-the-model"><span class="header-section-number">6.1</span> The initial state of the model</h2>
+<p>Let’s review how the model is initialized under the hood.</p>
+<p>First, a phylogeny for the species in the metacommunity is simulated based on the rates of speciation and extinction in the metacommunity (speciation_meta and extinction_meta parameters).</p>
+<p>Second, abundances for the species in the metacommunity are simulated using a log series model.</p>
+<p>Third, traits for the species in the metacommunity are simulated across the phylogeny using a Brownian motion model.</p>
+<p>Finally, the colonization from our metacommunity to the new local community is simulated (depending on the init_type parameter, which chooses the model).</p>
+<p>In the oceanic island case, a single dispersal event of just one species occurs, for example through a vegetation raft. This means that all individuals in the local will start as that one species.</p>
+<p>In the bridge island case, many species arrive at once through a land bridge, making the initial individuals a variety of different species.</p>
 
 
 </section>

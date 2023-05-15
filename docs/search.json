@@ -84,18 +84,109 @@
     "text": "No code, high level narrative (or visuals!) of what happens in a RoLE model."
   },
   {
+    "objectID": "components.html",
+    "href": "components.html",
+    "title": "4  Components of a RoLE model",
+    "section": "",
+    "text": "Next we will examine what the components of the RoLE model are, what each means biologically, and how to access them within roleR’s classes and structure."
+  },
+  {
     "objectID": "components.html#local-community",
     "href": "components.html#local-community",
     "title": "4  Components of a RoLE model",
-    "section": "4.2 Local community",
-    "text": "4.2 Local community\n\n4.2.1 Species, traits, phylogeny, genetics"
+    "section": "4.1 Local community",
+    "text": "4.1 Local community\nA local community is an assemblage of interacting species that occur in the same location and ecosystem. For example given a series of islands where each has just one type of habitat and no barriers, each could be considered a different local community.\nThe ‘localComm’ class in roleR stores the state of what species are present in local community, their abundances and genetic sequences, and what traits individuals have. Then we can simulate how this community changes over time.\n\n4.1.1 Individual-indexed vectors\nThe ‘localComm’ slots ‘indSpecies’, ‘indTrait’, and ‘indSeqs’ are vectors containing species IDs, traits, and sequences for each individual.\nWe can access an individual’s information by indexing these vectors. for example given a ‘localComm’ called my_local, my_local@indSpecies[2] is the ID of the species of individual 2, and my_local@indSeqs[5] is the genetic sequence of individual 5.\n\n\n4.1.2 Species-indexed vectors\nThe ‘localComm’ slots ‘spAbund’, ‘spTrait’, and ‘spGenDiv’ are vectors contain the abundance (number of individuals), average trait value, and genetic diversity of each species. (how is genetic diversity calculated?)\nJust like with the individual-level vectors, we can access species information by indexing. For example given a ‘localComm’ called my_local, my_local@spAbund[2] is the abundance of species 2, and my_local@spTrait[5] is the mean trait value of all living individuals of species 5."
+  },
+  {
+    "objectID": "components.html#metacommunity",
+    "href": "components.html#metacommunity",
+    "title": "4  Components of a RoLE model",
+    "section": "4.2 Metacommunity",
+    "text": "4.2 Metacommunity\nA metacommunity is a group of local communities linked by dispersal (immigration) of organisms between them.\nThe ‘metaComm’ class in roleR contains the abundances and traits of each species in the metacommunity. This can be understood as describing the species that occur outside our focal ‘localComm’ local community but have the capacity to disperse (immigrate) to it. Species with higher abundance in the metacommunity are more likely to disperse to our local community.\n\n4.2.1 Species-indexed vectors\nBecause ‘metaComm’ contains only species and not individuals it only has vectors that are species-indexed.\nFor example given a ‘metaComm’ called my_meta, my_meta@spAbund[2] is the abundance of species 2, and my_meta@spTrait[5] is the mean trait value of all living individuals of species 5."
+  },
+  {
+    "objectID": "components.html#phylogeny",
+    "href": "components.html#phylogeny",
+    "title": "4  Components of a RoLE model",
+    "section": "4.3 Phylogeny",
+    "text": "4.3 Phylogeny\nThe roleR phylogeny class ‘rolePhylo’ contains the phylogenetic relationships between all the species in the local community AND the metacommunity.\nIt contains various slots that you can access, but you will almost always be better off coercing it to the ‘phylo’ class of the R package ‘ape’. Given a ‘rolePhylo’ called ‘phy’ and with the ‘ape’ package loaded, you can coerce it using phy <- as(phy,‘phylo’)."
+  },
+  {
+    "objectID": "components.html#wrapping-it-all-together",
+    "href": "components.html#wrapping-it-all-together",
+    "title": "4  Components of a RoLE model",
+    "section": "4.4 Wrapping it all together",
+    "text": "4.4 Wrapping it all together\nWe have seen how the local community ‘localComm’, the metacommunity ‘metaComm’, and the phylogeny ‘rolePhylo’ work together to represent the state of our model system. For bookkeeping, we hold them together in a ‘roleData’ object, which has slots ‘local’, ‘meta’ and ‘phylo’.\nFinally, because we want to understand not just the end state of a simulated process, but also how it has changed over time, we store each progressing ‘roleData’ state of the model in a list within the ‘roleModel’ class. The diagram below describes this structure.\n\nknitr::include_graphics(\"components.png\")"
+  },
+  {
+    "objectID": "inputs.html",
+    "href": "inputs.html",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "",
+    "text": "Having just explored the components of the model, we will now review the input parameters that “set the stage” by defining both how these components are initialized and how they change over the course of the simulation.\nWe will also review the default configurations of parameters available in roleR and their meanings and assumptions."
+  },
+  {
+    "objectID": "inputs.html#initialization-param",
+    "href": "inputs.html#initialization-param",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.1 Initialization param",
+    "text": "5.1 Initialization param\ninit_type is the model of colonization used to initialize the simulation, either “oceanic_island” or “bridge_island”\nThe bridge island model has the initial individuals in the local community arriving through a land bridge, while the oceanic has no bridge and is populated by a single dispersal event. Thus, for oceanic island models, all individuals are of a SINGLE species sampled proportional to meta community species abundances, while in bridge island models, individuals are sampled of MANY species proportional to their abundances."
+  },
+  {
+    "objectID": "inputs.html#community-shape-params",
+    "href": "inputs.html#community-shape-params",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.2 Community shape params",
+    "text": "5.2 Community shape params\nindividuals_local is the number of individuals in the local community\nindividuals_meta is the number of individuals in the metacommunity\nspecies_meta is the number of species in the metacommunity"
+  },
+  {
+    "objectID": "inputs.html#birth-vs.-dispersal-param",
+    "href": "inputs.html#birth-vs.-dispersal-param",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.3 Birth vs. dispersal param",
+    "text": "5.3 Birth vs. dispersal param\ndispersal_prob is probability of dispersal (immigration) occurring from the metacommunity to the local community at each time step\nEvery time step, either birth or immigration ALWAYS happens, so the probability of birth is just 1 minus the dispersal_prob."
+  },
+  {
+    "objectID": "inputs.html#speciation-and-extinction-params",
+    "href": "inputs.html#speciation-and-extinction-params",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.4 Speciation and extinction params",
+    "text": "5.4 Speciation and extinction params\nspeciation_local is the probability of speciation occurring in the local community at each time step.\nThe new local species can be either from a birth in the local community or an immigration from the metacommunity - the aforementioned dispersal_prob param determines the chance of each of these scenarios.\nspeciation_meta is the rate of speciation in the metacommunity.\nThis is used during the simulation of the start phylogeny for metacommunity species. In addition, the sum of speciation_meta and extinction_meta is equal to the average lifetime of phylo branches, and the larger this value the less new individual traits will deviate from the parent’s individual trait (if parent is in the local comm) or the metacommunity mean (if parent in the metacommunity).\nextinction_meta is the rate of extinction in the metacommunity. Like speciation_meta, it is used in the initial phylogeny simulation and in relation to trait deviation."
+  },
+  {
+    "objectID": "inputs.html#traits-filtering-and-competition-params",
+    "href": "inputs.html#traits-filtering-and-competition-params",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.5 Traits, filtering, and competition params",
+    "text": "5.5 Traits, filtering, and competition params\ntrait_sigma is the rate of Brownian trait evolution in the metacommunity. It determines how much the trait of a new individual deviates from its parent, i.e. how fast traits change.\nenv_sigma is the selectivity of the environmental filter, i.e. how strongly the environment selects which trait values are a good match for it. The larger the value, the less chance an individual will survive if it’s far from the trait optimum (which is 0).\ncomp_sigma is the size of the competition kernel: how strongly distance from the traits of other species selects which trait values are likely to survive. The larger the value, the greater the chance an individual will survive if it is close in trait space to others"
+  },
+  {
+    "objectID": "inputs.html#genetics-params",
+    "href": "inputs.html#genetics-params",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.6 Genetics params",
+    "text": "5.6 Genetics params\nmutation_rate\nnum_basepairs"
+  },
+  {
+    "objectID": "inputs.html#meta-params",
+    "href": "inputs.html#meta-params",
+    "title": "5  Model inputs: Setting the stage",
+    "section": "5.7 Meta params",
+    "text": "5.7 Meta params\nniter is the number of iteration time steps to run the simulation for.\nniterTimestep is the frequency (in numbers of iterations) at which the model state is snapshot and saved in a model’s model steps object."
   },
   {
     "objectID": "inputs.html#pre-set-configurations",
     "href": "inputs.html#pre-set-configurations",
     "title": "5  Model inputs: Setting the stage",
-    "section": "5.2 Pre-set configurations",
-    "text": "5.2 Pre-set configurations"
+    "section": "5.8 Pre-set configurations",
+    "text": "5.8 Pre-set configurations\nuntbParams"
+  },
+  {
+    "objectID": "initialization.html",
+    "href": "initialization.html",
+    "title": "6  Initialization",
+    "section": "",
+    "text": "Let’s review how the model is initialized under the hood.\nFirst, a phylogeny for the species in the metacommunity is simulated based on the rates of speciation and extinction in the metacommunity (speciation_meta and extinction_meta parameters).\nSecond, abundances for the species in the metacommunity are simulated using a log series model.\nThird, traits for the species in the metacommunity are simulated across the phylogeny using a Brownian motion model.\nFinally, the colonization from our metacommunity to the new local community is simulated (depending on the init_type parameter, which chooses the model).\nIn the oceanic island case, a single dispersal event of just one species occurs, for example through a vegetation raft. This means that all individuals in the local will start as that one species.\nIn the bridge island case, many species arrive at once through a land bridge, making the initial individuals a variety of different species."
   },
   {
     "objectID": "timesteps.html",
@@ -135,30 +226,30 @@
   {
     "objectID": "outputs.html",
     "href": "outputs.html",
-    "title": "9  Model results",
+    "title": "9  Extracting model results",
     "section": "",
-    "text": "What are the results of a role model?"
+    "text": "We have seen that the ‘runRole()’ function runs an initialized model to completion. What kinds of results can we get from a run model?\nA useful way to store model results is in a dataframe where each row is a saved model state and each column contains different info about that state.\nWe use the ‘getSumStats()’ function to do this for a model. The first argument is the model itself, while the second argument is a named list of functions. Each function expresses one way that you want to summarize the model state, and the name of that function in the list expressed the name to give to the column in your new dataframe.\nThe above code supplies the roleR built-in functions ‘richness’ and ‘hillAbund’, with data extracted using these functions to be placed in columns called ‘rich’ and ‘hill_abund’ respectively.\nBut what are these functions, and how can you write your own specialized ones?"
   },
   {
     "objectID": "outputs.html#raw-community-state",
     "href": "outputs.html#raw-community-state",
-    "title": "9  Model results",
+    "title": "9  Extracting model results",
     "section": "9.1 Raw community state",
-    "text": "9.1 Raw community state"
+    "text": "9.1 Raw community state\nSeveral functions simply get raw information about the community state.\n‘rawAbundance’\n‘rawSpAbundance’\n‘rawSppID’\n‘rawTraits’\n‘rawGenDiv’\n‘rawSeqs’\n‘rawBranchLengths’\n‘rawApePhylo’"
   },
   {
     "objectID": "outputs.html#summary-statistics",
     "href": "outputs.html#summary-statistics",
-    "title": "9  Model results",
+    "title": "9  Extracting model results",
     "section": "9.2 Summary statistics",
-    "text": "9.2 Summary statistics"
+    "text": "9.2 Summary statistics\nThe remaining built-in functions are more complex, summarizing information from model components rather than just returning the raw components.\n‘richness’\n‘hillAbund’\n‘hillGenetic’\n‘hillTrait’\n‘hillPhylo’"
   },
   {
-    "objectID": "experiments.html",
-    "href": "experiments.html",
-    "title": "10  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "outputs.html#writing-custom-getsumstats-functions",
+    "href": "outputs.html#writing-custom-getsumstats-functions",
+    "title": "9  Extracting model results",
+    "section": "9.3 Writing custom getSumStats functions",
+    "text": "9.3 Writing custom getSumStats functions"
   },
   {
     "objectID": "running.html",
@@ -168,53 +259,67 @@
     "text": "Ok, how do I actually play with RoLE?"
   },
   {
+    "objectID": "install.html",
+    "href": "install.html",
+    "title": "10  Installation",
+    "section": "",
+    "text": "We recommend installing our pre-compiled binaries from r-universe.\n\ninstall.packages('roleR', repos = c('https://role-model.r-universe.dev', 'https://cloud.r-project.org'))"
+  },
+  {
     "objectID": "install.html#from-source",
     "href": "install.html#from-source",
-    "title": "11  Installation",
-    "section": "11.2 From source",
-    "text": "11.2 From source"
+    "title": "10  Installation",
+    "section": "10.2 From source",
+    "text": "10.2 From source\nYou can also install from source from our GitHub repository, but it is not recommended.\n\nlibrary(remotes)\nremotes::install_github(\"role-model/roleR\",dependencies=TRUE)"
   },
   {
-    "objectID": "shiny.html#access",
-    "href": "shiny.html#access",
-    "title": "12  RoLE Shiny",
-    "section": "12.2 Access",
-    "text": "12.2 Access"
+    "objectID": "r_example.html",
+    "href": "r_example.html",
+    "title": "11  Your first RoLE model",
+    "section": "",
+    "text": "Let’s go through the steps of running simple neutral model."
   },
   {
-    "objectID": "shiny.html#using",
-    "href": "shiny.html#using",
-    "title": "12  RoLE Shiny",
-    "section": "12.3 Using",
-    "text": "12.3 Using"
-  },
-  {
-    "objectID": "shiny.html#saving-results",
-    "href": "shiny.html#saving-results",
-    "title": "12  RoLE Shiny",
-    "section": "12.4 Saving results",
-    "text": "12.4 Saving results"
+    "objectID": "r_example.html#model-specification",
+    "href": "r_example.html#model-specification",
+    "title": "11  Your first RoLE model",
+    "section": "11.1 Model specification",
+    "text": "11.1 Model specification\nFirst we make a roleParams object to contain the parameters for our model. The roleParams constructor has defaults for all 19 params, here we just change the number of iterations and how often to save the model state.\n\nmy_params <- roleParams(niter=10000,niterTimestep = 100)\n\nThen we make a roleModel object using these params.\n\nmy_model <- roleModel(my_params)"
   },
   {
     "objectID": "r_example.html#running",
     "href": "r_example.html#running",
-    "title": "13  Your first RoLE model",
-    "section": "13.2 Running",
-    "text": "13.2 Running"
+    "title": "11  Your first RoLE model",
+    "section": "11.2 Running",
+    "text": "11.2 Running\nTo run, we call runRole on the model.\n\nmy_model <- runRole(my_model)"
   },
   {
     "objectID": "r_example.html#results-and-interpretation",
     "href": "r_example.html#results-and-interpretation",
-    "title": "13  Your first RoLE model",
-    "section": "13.3 Results and interpretation",
-    "text": "13.3 Results and interpretation"
+    "title": "11  Your first RoLE model",
+    "section": "11.3 Results and interpretation",
+    "text": "11.3 Results and interpretation\nFinally let’s visualize a simple result - the species richness of the local community over time.\n\nmy_model_stats <- getSumStats(my_model)\n\nlibrary(ggplot2)\nggplot(my_model_stats, aes(iteration, richness)) +\n    geom_line()"
   },
   {
-    "objectID": "reproducibility.html#storing-model-results",
-    "href": "reproducibility.html#storing-model-results",
-    "title": "15  Reproducibility",
-    "section": "15.2 Storing model results",
-    "text": "15.2 Storing model results"
+    "objectID": "reproducibility.html",
+    "href": "reproducibility.html",
+    "title": "13  Data sharing and reproducibility",
+    "section": "",
+    "text": "It is good practice to save your models and experiments so that other researchers can understand and repeat your results. Before saving you will want to attach context metadata to your object using the ‘setContext’ function.\n\nmy_model <- setContext(my_model,author=\"Jacob Idec\",datestring=\"5/4/2023\",description=\"A model saved for the purpose of demonstrating setContext and writeRole within the roleR user guide\")\n\nThen you can save using the ‘writeRole’ function\n\nwriteRole(my_model,filename=\"my_model\")"
+  },
+  {
+    "objectID": "reproducibility.html#stochasticity-and-non-repeatability",
+    "href": "reproducibility.html#stochasticity-and-non-repeatability",
+    "title": "13  Data sharing and reproducibility",
+    "section": "13.2 Stochasticity and non-repeatability",
+    "text": "13.2 Stochasticity and non-repeatability\nMay want to allow setting a seed in roleModels and experiments - note that this doesn’t work currently because the random number generator is on the Cpp side"
+  },
+  {
+    "objectID": "batch.html",
+    "href": "batch.html",
+    "title": "14  RoLE models at scale",
+    "section": "",
+    "text": "When running a roleExperiment, you can run each model on a different processor core in Windows, Mac, and Linux by using the ‘cores’ argument of runRole.\n\nmy_expr <- runRole(my_expr, cores=5)"
   },
   {
     "objectID": "use_cases.html",
@@ -226,28 +331,28 @@
   {
     "objectID": "exploration.html",
     "href": "exploration.html",
-    "title": "17  RoLE Models for In-Silico Exploration",
+    "title": "15  RoLE Models for In-Silico Exploration",
     "section": "",
     "text": "Generate and test hypotheses for how different types of conditions/interventions affect model outcomes."
   },
   {
     "objectID": "empirical.html#likelihood-free-inference",
     "href": "empirical.html#likelihood-free-inference",
-    "title": "18  Linking pattern to process in empirical data",
-    "section": "18.2 Likelihood-free inference",
-    "text": "18.2 Likelihood-free inference"
+    "title": "16  Linking pattern to process in empirical data",
+    "section": "16.2 Likelihood-free inference",
+    "text": "16.2 Likelihood-free inference"
   },
   {
     "objectID": "empirical.html#worked-example",
     "href": "empirical.html#worked-example",
-    "title": "18  Linking pattern to process in empirical data",
-    "section": "18.3 Worked example",
-    "text": "18.3 Worked example"
+    "title": "16  Linking pattern to process in empirical data",
+    "section": "16.3 Worked example",
+    "text": "16.3 Worked example"
   },
   {
     "objectID": "classroom.html",
     "href": "classroom.html",
-    "title": "19  RoLE in the Classroom",
+    "title": "17  RoLE in the Classroom",
     "section": "",
     "text": "Tips, tricks, and sample curricula from using RoLE as a teaching tool."
   },
@@ -261,8 +366,15 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "20  Contact",
+    "title": "18  Contact",
     "section": "",
     "text": "We respond to GitHub issues!"
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "We gratefully acknowledge funding support from NSF awards DBI-2208901 to Renata Diaz and DBI-2104147 to the RoLE model team"
   }
 ]
